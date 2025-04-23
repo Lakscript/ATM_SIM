@@ -75,6 +75,7 @@ def show_history(token, pin):
     if authorize(token, pin):
         try:
             with open('history.csv', 'r') as file:
+                print("\nTransaction History:")
                 for line in file:
                     t, p, amt, action = line.strip().split(';')
                     if int(t) == token:
@@ -82,8 +83,7 @@ def show_history(token, pin):
         except FileNotFoundError:
             print("No transaction history found.")
 
-
-
+# Main loop
 def main():
     load_accounts()
     while True:
@@ -124,5 +124,5 @@ def main():
         else:
             print("Invalid choice. Please try again.")
 
-#calling main function 
+# Run the ATM system
 main()
