@@ -79,7 +79,7 @@ def show_history(token, pin):
                 for line in file:
                     t, p, amt, action = line.strip().split(';')
                     if int(t) == token:
-                        print(f"{action}: ₦{amt}")
+                        print(f"{action}: Rs {amt}")
         except FileNotFoundError:
             print("No transaction history found.")
 
