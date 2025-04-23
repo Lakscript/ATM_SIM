@@ -84,7 +84,6 @@ def show_history(token, pin):
 
 
 
-# Main loop
 def main():
     load_accounts()
     while True:
@@ -98,7 +97,8 @@ def main():
         choice = input("Choose an option (1-5): ")
 
         if choice == "1":
-            create_account()
+            initial_deposit = int(input("Enter initial deposit amount: "))
+            create_account(initial_deposit)
 
         elif choice == "2":
             token = int(input("Enter your token: "))
@@ -124,5 +124,5 @@ def main():
         else:
             print("Invalid choice. Please try again.")
 
-# Run the ATM system
+#calling main function 
 main()
