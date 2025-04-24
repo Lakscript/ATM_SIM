@@ -31,9 +31,3 @@ This is a beginner-friendly Python project that simulates an ATM system using CS
 
 ---
 
-## 🧪 How to Use
-
-1. **Clone the repo**
-   ```bash
-   git clone https://github.com/yourusername/atm-system-python.git
-   cd atm-system-python
